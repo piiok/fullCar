@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2018 a las 15:18:04
+-- Tiempo de generación: 09-05-2018 a las 15:41:40
 -- Versión del servidor: 5.7.17-log
 -- Versión de PHP: 7.1.16
 
@@ -33,7 +33,7 @@ CREATE TABLE `usuario` (
   `nombre` varchar(20) NOT NULL,
   `pass` varchar(20) NOT NULL,
   `spam` tinyint(1) DEFAULT NULL,
-  `p__conducir` varchar(30) DEFAULT NULL,
+  `p_conducir` varchar(30) DEFAULT NULL,
   `foto` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
