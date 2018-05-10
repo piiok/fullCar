@@ -15,7 +15,7 @@
 	<script src="./librerias/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
 	
 	<center>
-		<form id="form_v1" name="form_v1" action="" method="POST" accept-charset="utf-8" enctype="multipart/form-data" >
+		<form id="form_v1" name="form_v1" action="mi-vehiculo_db.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data" >
 			<!-- El enctype="multipart/form-data" es necesario para enviar los FILES -->
 					<a name="parte1"></a>
 					<section id="parte1">
@@ -31,7 +31,8 @@
 							<option value="buseta">Buseta</option>
 							<option value="bus">Bus</option>
 							<option value="otro">Otro</option>
-						</select>
+						</select><br>
+						<br>
 						Modelo: <input type="text" id="modelo" name="modelo" placeholder="Escribe el modelo de tu auto" > <br>
 						<br>
 						Color: <input type="text" id="color" name="color" placeholder="Ingrese el color de tu auto" required="true"> <br>

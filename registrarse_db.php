@@ -12,9 +12,22 @@
 		extract($_POST);
 		extract($_FILES);
 
-		$foto_user  = "./docs/foto_usuario/".$cel.".jpg";
+		$foto_user  = "./docs/foto_usuario/".$cel.".".end(explode(".", $foto["name"]));
 		$p_conducir_user = "./docs/p_conducir/".$cel.".pdf";
 
+		if ($foto['tmp_name']=="") {
+			$foto_user  = "";
+		}
+
+		if ($p_conducir['tmp_name']=="") {
+			$p_conducir_user="";
+		}
+
+		if ($spam) {
+			$spam=1;
+		}else{
+			$spam=0;
+		}
 
 		$cons="INSERT INTO usuario(cel,nombre,pass,spam,p_conducir,foto) VALUES ('".$cel."','".$nombre."', '".md5($pass)."', '".$spam."', '".$p_conducir_user."','".$foto_user."')";
 
@@ -22,14 +35,14 @@
 		if(empty($res)){
  			echo 'Error al registrarse: '.mysqli_error($conn);
 		}else{
-			if (!empty($foto)) {
+			if ($foto['tmp_name']!="") {
 				if (move_uploaded_file($foto['tmp_name'], $foto_user)) {
 					echo "El fichero es valido y se subió con éxito<br>";
 				}else{
 					echo "¡Posible error en la subida de los ficheros!<br>";
 				}
 			}
-			if (!empty($p_conducir)) {
+			if ($p_conducir['tmp_name']!="") {
 				if (move_uploaded_file($p_conducir['tmp_name'], $p_conducir_user)) {
 					echo "El fichero es valido y se subió con éxito<br>";
 				}else{
@@ -38,7 +51,7 @@
 			}
 		}
 		$conn->close();
-		#header("Location: ./index.php");
+		header("Location: ./index.php");
 		
 
  	?>
