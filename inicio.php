@@ -1,3 +1,11 @@
+<?php 
+error_reporting(0);
+session_start();
+if ($_SESSION[sesion]=="si") {
+  header("Location: ./index.php");
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +46,7 @@
     </div>
     <center style="font-weight: bolder; text-shadow:2px 1px 32px #000000;color:yellow;">
         <?php 
-      error_reporting(0);
+
       extract($_GET);
       if ($error=="NoCel") {
         echo "Celular no registrado.";
