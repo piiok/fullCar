@@ -29,7 +29,7 @@
 			$spam=0;
 		}
 
-		$cons="INSERT INTO usuario(cel,nombre,pass,spam,p_conducir,foto) VALUES ('".$cel."','".$nombre."', '".md5($pass)."', '".$spam."', '".$p_conducir_user."','".$foto_user."')";
+		$cons="INSERT INTO usuario(cel,nombre,pass,spam,p_conducir,foto,correo) VALUES ('".$cel."','".$nombre."', '".md5($pass)."', '".$spam."', '".$p_conducir_user."','".$foto_user."','".$correo."')";
 
 		$res = mysqli_query ($conn ,$cons);
 		if(empty($res)){
