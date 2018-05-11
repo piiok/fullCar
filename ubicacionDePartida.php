@@ -27,19 +27,23 @@
     <script>
 
       function initMap() {
-        var myLatLng = {lat: 7.136705058020035, lng: -73.12423657625914};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: myLatLng
-        });
-        var image = './images/icono.png';
-        var beachMarker = new google.maps.Marker({
-          position: myLatLng,
+        var mapCanvas = document.getElementById("map");
+        var myCenter=new google.maps.LatLng(7.140292875841898,-73.12015504377644);
+        var mapOptions = {center: myCenter, zoom: 13};
+        
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+          google.maps.event.addListener(map, 'click', function(event) {
+            placeMarker(map, event.latLng,marker);
+          });
+        var marker = new google.maps.Marker({
+          position: myCenter,
           map: map,
-          icon: image,
-          animation: google.maps.Animation.BOUNCE,
-          title: 'CRA 23 #10-53, San Francisco'
+          //icon: image,
+          //animation: google.maps.Animation.BOUNCE,
         });
+        }
+        //var image = './images/icono.png';
+
 
         // Create an array of alphabetical characters used to label the markers.
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -48,21 +52,35 @@
         // Note: The code uses the JavaScript Array.prototype.map() method to
         // create an array of markers based on a given "locations" array.
         // The map() method here has nothing to do with the Google Maps API.
-        var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
+        //var markers = locations.map(function(location, i) {
+         // return new google.maps.Marker({
+          //position: location,
+          //label: labels[i % labels.length]
+          //});
+        //});
+        function placeMarker(map, location,marker) {
+          //var marker = new google.maps.Marker({
+          //  position: location,
+          //  map: map
+          //});
+          var latlng = new google.maps.LatLng(location.lat(),location.lng())
+          marker.setPosition(latlng);
+          var infowindow = new google.maps.InfoWindow({
+            content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
           });
-        });
+          infowindow.open(map,marker);
+        }
+      
 
         // Add a marker clusterer to manage the markers.
-        var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-      }
+        //var markerCluster = new MarkerClusterer(map, markers,
+            //{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          //}
 
     </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXyvCsjT_I4FcKCIm7Bl3fJqhGYO-MDJ4&callback=initMap">
     </script>
