@@ -1,4 +1,4 @@
-    body{
+ body{
       background-color: white;
     }
     .formulario{
@@ -62,6 +62,16 @@
     background-size: cover;
   
 
+    }
+
+    .texto{
+      text-align: justify;
+      -webkit-text-fill-color: white;
+-webkit-text-stroke: 0.2px black;
+    }
+    .texto2{
+      text-align: justify;
+      color: black;
     }
  
     footer {

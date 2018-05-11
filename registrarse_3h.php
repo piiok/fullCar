@@ -42,8 +42,24 @@
 	<link rel="shortcut icon" href="imagenes/icon.ico" type="image/x-icon" />
 </head>
 <body>
-	<?php 
-	header("Location: ./mi-vehiculo_1.php");
-	 ?>
+	<script src="./librerias/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+			<!-- El enctype="multipart/form-data" es necesario para enviar los FILES -->
+						<br>
+						<br>
+						<h3>REGISTRARSE</h3> <br>
+						<h1 style="text-decoration:underline;">Aviso legal</h1> <br>
+						<p style="width: 80vw;">
+							Al finalizar el registro usted acepta que FullCar utilice sus datos personales, con fines del mejoramiento de la experiencia con la aplicación.
+						</p>
+						<a href="#parte2" title="Atras" style="text-decoration: none;">
+						<input type="button" id="a3" value="Atras">
+						</a>
+						<a href="./mi-vehiculo_1.php" title="Continuar"><button>Continuar</button></a>
+						<!-- <input type="button" name="send" value="Finalizar" onclick="form_reg1.submit()">  -->
+						<!-- El botón debe ser un tag input para evitar el auto-envió con el enter -->
+		</form>
+
+	<!-- <script src="./js/registrarse_ajax.js" type="text/javascript"></script> -->
 </body>
 </html>
