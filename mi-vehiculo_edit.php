@@ -57,7 +57,7 @@
 						<br>
 						Modelo: <input type="text" id="modelo" name="modelo" placeholder="Escribe el modelo de tu auto"> <br>
 						<br>
-						Color: <input type="text" id="color" name="color" placeholder="Ingrese el color de tu auto" required="true"> <br>
+						Color: <input type="color" id="color" name="color" placeholder="Ingrese el color de tu auto" required="true"> <br>
 						<br>
 						Placa: <input type="text" id="placa" maxlength="6" name="placa" placeholder="xxx123" required="true"> <br>
 						<br>
