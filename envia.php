@@ -12,6 +12,7 @@
 	include("./conexion.php");
 	extract($_POST);
 
+
 	#echo $cel;
 
 	$res = mysqli_query ($conn ,"SELECT * FROM usuario WHERE cel=".$cel);
