@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2018 a las 15:41:40
+-- Tiempo de generación: 16-05-2018 a las 19:18:21
 -- Versión del servidor: 5.7.17-log
 -- Versión de PHP: 7.1.16
 
@@ -31,10 +31,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `usuario` (
   `cel` varchar(15) NOT NULL,
   `nombre` varchar(20) NOT NULL,
-  `pass` varchar(20) NOT NULL,
-  `spam` tinyint(1) DEFAULT NULL,
+  `pass` varchar(45) NOT NULL,
+  `spam` varchar(1) NOT NULL,
   `p_conducir` varchar(30) DEFAULT NULL,
-  `foto` varchar(30) DEFAULT NULL
+  `foto` varchar(45) DEFAULT NULL,
+  `correo` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -50,7 +51,9 @@ CREATE TABLE `vehiculo` (
   `color` varchar(15) DEFAULT NULL,
   `t_propiedad` varchar(30) DEFAULT NULL,
   `t_mecanico` varchar(30) DEFAULT NULL,
-  `tipo` varchar(10) DEFAULT NULL
+  `tipo` varchar(10) DEFAULT NULL,
+  `foto` varchar(30) DEFAULT NULL,
+  `cel_v` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -67,7 +70,8 @@ ALTER TABLE `usuario`
 -- Indices de la tabla `vehiculo`
 --
 ALTER TABLE `vehiculo`
-  ADD PRIMARY KEY (`id_vehiculo`);
+  ADD PRIMARY KEY (`id_vehiculo`),
+  ADD KEY `posee_idx` (`cel_v`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -77,7 +81,17 @@ ALTER TABLE `vehiculo`
 -- AUTO_INCREMENT de la tabla `vehiculo`
 --
 ALTER TABLE `vehiculo`
-  MODIFY `id_vehiculo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_vehiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `vehiculo`
+--
+ALTER TABLE `vehiculo`
+  ADD CONSTRAINT `posee` FOREIGN KEY (`cel_v`) REFERENCES `usuario` (`cel`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
