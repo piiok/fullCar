@@ -1,6 +1,6 @@
 <?php
 $server = "localhost";
-$user = "root";
+$user = "hci";
 $pass = "admin";
 $db = "full_car";
 
