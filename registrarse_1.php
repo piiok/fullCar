@@ -46,21 +46,22 @@
      	 	</script>
 		</center>
     	<hr>
+
 	    <div class="celular form-group">
-			<label for="exampleInputEmail1" >Nombre</label>
-			<input type="text" name="nombre" placeholder="Ingrese su nombre" required="true" class="form-control" id="exampleInputEmail1">
+			<label for="exampleInputEmail1">Coloca tu nombre completo</label>
+			<input type="text" name="nombre" class="form-control" id="exampleInputEmail1" required="tru" aria-describedby="emailHelp" placeholder="Nombres y Apellidos" pattern="[a-z A-Z]+" title="Recuerda que solo se pueden caracteres alfabeticos">
     	</div>
 		<div class="celular form-group">
-			<label for="exampleInputEmail1" >Celular</label>
-			<input type="number" id="cel" name="cel" placeholder="Ingrese su número de celular" required="true" class="form-control"> 
+			<label for="exampleInputEmail1">Escribe tu numero de celular</label>
+			<input type="num" id="cel" name="cel" class="form-control" id="exampleInputEmail1" required="tru" aria-describedby="emailHelp" placeholder="123 456 7890" pattern="[0-9]+" title="Recuerda este campo solo van caracteres numericos" minlength="10" maxlength="10"> 
 	    </div>
 	    <div class="celular form-group">
-	    	<label for="exampleInputEmail1" >Correo</label>
-	    	<input type="email" id="correo" name="correo" placeholder="Ingrese su número de celular" required="true"  class="form-control">
+	    	<label for="exampleInputEmail1">Escribe tu email ó correo electronico</label>
+	    	<input type="email" id="correo" name="correo" class="form-control" id="exampleInputEmail1" required="tru" aria-describedby="emailHelp" placeholder="correo@ejemplo.com">
     	</div>
     	<div class="celular form-group">
-			<label for="exampleInputPassword1">Contraseña</label>
-			<input type="password" id="pass" name="pass" placeholder="Contraseña" required="true" class="form-control" class="form-control"> 
+			<label for="exampleInputPassword1">Contraseña entre 5 y 12 caracteres</label>
+			<input type="password" id="pass" name="pass" class="form-control" required="tru" placeholder="XXXXXX" minlength="5" maxlength="12" pattern="[A-Za-z0-9]+" title="Letras y numeros. Tamaño minimo 5 y maximo 12"> 
 		</div>
 		
 		<fieldset class="celular form-group">
