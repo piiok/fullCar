@@ -9,6 +9,14 @@
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	  <style>
+	  	input:valid, textarea:valid {
+  		border: solid green 2px;
+		}
+		input:invalid, textarea:invalid {
+ 		 border: solid red 1px;
+		}
+	  </style>
 	</head>
 <body>
 	<script src="./librerias/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -22,14 +30,17 @@
 			<div id="visualizar">
 		     	<img id="image" src="./imagenes/perfil.png" style="width:70%;">
 			</div>
-			<div class="celular form-group">
-			<div class="input-group mb-3">
-		  	    <div class="custom-file">
-				<input class="custom-file-input" type="file" id="file" name="foto" accept="image/*" placeholder="Selecciona una imagen">
-				<label style="text-align: left;" class="custom-file-label" for="inputGroupFile02">Su foto aquí... </label>
-				</div>
-			</div>
-			</div>
+			<div class="container" style="margin-top: 20px;">
+    <div class="row">
+      
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xl-12">
+            <center><label class="btn btn-block btn-dark" style="border: solid white 0.5px;">
+                Subir&hellip; <input id="file" type="file" style="display: none;" class="custom-file-input"name="foto" accept="image/*" placeholder="Selecciona una imagen">
+            </label></center>
+        </div>
+        
+    </div>
+</div>
 			<script>
               	document.getElementById("file").onchange = function(e) {
 	  				let reader = new FileReader();
