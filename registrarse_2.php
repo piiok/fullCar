@@ -48,6 +48,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<style>
+		.texto2{
+      text-align: justify;
+      /*color: black;*/
+    }
+	</style>
 </head>
 <body>
 	<script src="./librerias/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -57,25 +63,34 @@
 		<fieldset>
 		  <legend><center><h1>Registro</h1></center></legend>
 		  <center><img src="imagenes/logofull1.png" style="width: 50%"></center>
-		  	  <div class="celular form-group">
-		  	  <div class="input-group mb-3">
-		  	    <div class="custom-file">
-		  	      <input type="file" class="custom-file-input" type="file" name="p_conducir" accept="application/pdf" placeholder="Selecciona una imagen">
-		  	      <label class="custom-file-label" for="inputGroupFile02">Sube tu licencia acá</label>
-		  	    </div>
-		  	    <!-- <div class="input-group-append">
-		  	      <span class="input-group-text" id="">Upload</span>
-		  	    </div> -->
-		  	  </div>
-		  	</div>
-			<div class="celular texto">
-			    <p>Es necesario que nos proporciones tu permiso de conducir, ya que esta aplicacion es dirigida a personas que poseen un vehiculo o que conducen uno. El documento debe proporcinarse como archivo .pdf y NO DEBE SUPERAR LOS 500Kb</p>
-			</div>
-			<hr>	
-			<div class="celular texto2" style="background-color: black; opacity: 0.7; border-radius: 5px;padding: 13px;">
-			 	<h4 style="color: white;">Aviso de legalidad</h4>
-			    <p><strong style="color: white;">Al finalizar el registro usted acepta que Fullcar utilice sus datos personales, con fines del mejoramiento de este.</strong></p>
-			</div>
+		  	  <br>
+		      <center><h4 style="margin-bottom: 30px;">¡Ya casi estas registrado!</h4></center>
+    		<div class="celular form-group">
+      		<div class="celular texto" style="margin-top: -20px;">
+    		<p>Es necesario que nos proporciones tu permiso de conducir, toma una foto por la parte de adelante del documento.</p>
+  			</div>
+  <!-- ############## -->
+  			<hr>
+     		<center><img src="imagenes/licencia.png" style="width: 70%"></center>
+		  	<div class="container" style="margin-top: 20px;">
+    		<div class="row">
+      		<div class="col-lg-12 col-sm-12 col-md-12 col-xl-12">
+		  	      <div class="col-lg-12 col-sm-12 col-md-12 col-xl-12">
+            <center><label class="btn btn-block btn-dark" style="border: solid white 0.5px;">
+                Subir&hellip; <input required="tru" type="file" name="p_conducir" accept="application/pdf" placeholder="Selecciona una imagen" style="display: none;">
+            </label></center>
+        </div>
+        
+    </div>
+</div>
+<hr>
+  <div class="cajatexto" style="background-color: rgb(0, 0, 0, 0.6);border-radius: 5px; margin-right: -20px; margin-left: -20px;">
+  <div class="celular texto2" style=" padding-right: 30px; padding-left: 30px; padding-bottom: 5px; padding-top: 12px;">
+    <h4 style="color: white; text-align: center;">Aviso de legalidad</h4>
+    <div class="linea" style="border: solid white 0.5px; margin-right: -20px; margin-left: -20px;"></div>
+    <p style="color: white;">Al finalizar el registro aceptas que Fullcar utilice tus datos personales, con fines del mejoramiento de la aplicacion.</p>
+  </div>
+</div>
 			<center><button type="submit" class="btn btn-warning btn-lg btn-large" style="margin-top: 30px; margin-bottom: 15px;border: solid 0.5px black;">Finalizar</button></center>
 			    </div>
 	</center>
