@@ -26,7 +26,7 @@
   	<fieldset>
     	<legend><center><h1>Registro</h1></center></legend>
 	    <center>
-			<hr>
+
 			<div id="visualizar">
 		     	<img id="image" src="./imagenes/perfil.png" style="width:70%;">
 			</div>

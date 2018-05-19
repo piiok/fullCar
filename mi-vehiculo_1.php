@@ -14,9 +14,8 @@
 <body>
 	<script src="./librerias/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
 	
-	<center>
-<div class="col-xl-12 text-left" class="col-lg-6 text-left" class="col-md-6 text-left" class="col-sm-6 text-left" style="padding-top: 15px; min-height: 100vh; display: grid;"> 
-	<form id="form_v1" name="form_v1" action="mi-vehiculo_db.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data" >
+	<center><div class="col-xl-12 text-left" class="col-lg-6 text-left" class="col-md-6 text-left" class="col-sm-6 text-left" style="padding-top: 15px; min-height: 100vh; display: grid;"> 
+	<form class="formulario" id="form_v1" name="form_v1" action="mi-vehiculo_db.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data" >
 			<!-- El enctype="multipart/form-data" es necesario para enviar los FILES -->
 <fieldset>
 					
@@ -33,7 +32,7 @@
       
         <div class="col-lg-12 col-sm-12 col-md-12 col-xl-12">
             <center><label class="btn btn-block btn-dark" style="border: solid white 0.5px;">
-                Subir foto de mi vehiculo&hellip; <input id="file" type="file" style="display: none;" class="custom-file-input"name="foto" accept="image/*" placeholder="Selecciona una imagen">
+                Sube una foto de tu vehiculo&hellip; <input id="file" type="file" style="display: none;" class="custom-file-input"name="foto" accept="image/*" placeholder="Selecciona una imagen">
             </label></center>
         </div>
         
@@ -54,6 +53,7 @@
 	  				reader.readAsDataURL(e.target.files[0]);
 				}	
      	 	</script>
+<br>
 <div class="linea" style="border: solid black 0.5px; margin-right: -10px; margin-left: -10px; margin-bottom: 15px;"></div>
      <div class=" celular form-group">
     <select class="custom-select" name="tipo">
@@ -86,7 +86,7 @@
     </div>
 						
 <br>
-   <div class="cajatexto" style="background-color: rgb(0, 0, 0, 0.6);border-radius: 5px; margin-right: -30px; margin-left: -30px;">
+   <div class="cajatexto" style="background-color: rgb(0, 0, 0, 0.6);border-radius: 5px; margin-right: -10px; margin-left: -10px;">
   <div class="celular texto" style=" padding-right: 20px; padding-left: 20px; padding-bottom: 5px; padding-top: 12px;">
     <h4 style="color: white; text-align: center;">Infomacion</h4>
     <div class="linea" style="border: solid white 0.5px; margin-right: -20px; margin-left: -20px; margin-bottom: 10px;"></div>
