@@ -71,7 +71,7 @@
 			}
 		}
 		$conn->close();
-		
+		header("Location: ./mi-vehiculo.php");
 
  	?>
 </body>

@@ -30,7 +30,7 @@
 			$t_propiedad_v="";
 		}
 
-		$cons="UPDATE full_car.vehiculo SET t_propiedad ='".$t_propiedad."', t_mecanico = '".$t_mecanico."' WHERE cel_v='".$_SESSION[cel]."';";
+		$cons="UPDATE full_car.vehiculo SET t_propiedad ='".$t_propiedad_v."', t_mecanico = '".$t_mecanico_v."' WHERE cel_v='".$_SESSION[cel]."';";
 
 		$res = mysqli_query ($conn ,$cons);
 		if(empty($res)){

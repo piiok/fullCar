@@ -1,7 +1,7 @@
 <html>
 <head>
 	<?php 
-		#error_reporting(0);
+		error_reporting(0);
 		session_start();
 		#echo $_SESSION[cel];
 		include("./conexion.php");
@@ -49,15 +49,15 @@
 						</div>
 						<div class="celular form-group">
 						<label for="exampleInputEmail1" >Modelo:</label>
-						<input class="form-control" type="text" id="modelo" name="modelo" placeholder="Escribe el modelo de tu auto" disabled> <br>
+						<input class="form-control" type="text" id="modelo" name="modelo" placeholder="" disabled> <br>
     					</div>
     					<div class="celular form-group">
 						<label for="exampleInputEmail1">Color: </label>
-						<input  class="form-control" type="text" id="color" name="color" placeholder="Ingrese el color de tu auto" required="true" disabled> <br>
+						<input  class="form-control" type="color" id="color" name="color" placeholder="" required="true" disabled> <br>
 						</div>
    						<div class="celular form-group">
 						<label for="exampleInputEmail1" >Placa</label>
-						<input class="form-control" type="text" id="placa" maxlength="6" name="placa" placeholder="xxx123" required="true" disabled> <br>
+						<input class="form-control" type="text" id="placa" maxlength="6" name="placa" placeholder="" required="true" disabled> <br>
 						<br>
 						<h4 style="font-weight: bold;">Documentos:</h4> <br>
 						Tarjeta de propiedad: 
@@ -75,7 +75,7 @@
 						 
 						 <br>
 						 Técnico mecánico: <a href="<?php 
-							echo $row[t_macanico]
+							echo $row[t_mecanico]
 						 ?>" alt="No hay documento" download>
 						 <?php 
 						 if ($row[t_mecanico]=="") {
