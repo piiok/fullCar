@@ -15,15 +15,29 @@
         <br>
         <h3>Ofrecer Ruta</h3> <br>
         <br>
-        Fecha de partida: <input type="date" name="Date"><br><br><br>
-        Hora de partida: <input type="time" name="HPartida"> <br><br><br>
-        Hora estimada de llegada: <input type="time" name="HLlegada"> <br><br><br>
+        Fecha de partida: <input type="date" id="Date" name="Date" onchange=""><br><br><br>
+        Hora de partida: <input type="time" id="HPartida" step="hh:mm" name="HPartida" > <br><br><br>
+        Hora estimada de llegada: <input type="time" name="HLlegada" id="HLlegada" value="12:00"> <br><br><br>
         Cantidad de cupos disponibles: <input type="number" name="cupos"><br><br><br>
 
         <button class="continuar" type="submit">Continuar</button>
       </form>
     </center>
-
+    <script>
+      var f=new Date(); 
+      document.getElementById("HPartida").value=f.getHours()+":"+f.getMinutes();
+      var x=f.getMonth()+1;
+      if (x<10) {
+        x="0"+x;
+      }
+      var y=f.getDate();
+      if (y<10) {
+        y="0"+y;
+      }
+      document.getElementById("Date").value = f.getUTCFullYear()+"-"+x+"-"+y;
+      //document.getElementById("HPartida").value=f.getHours()+":"+f.getMinutes();
+    </script>
+   
     
   </body>
 </html>
