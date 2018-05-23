@@ -9,7 +9,6 @@
 		#echo $sql;
 		$res = mysqli_query($conn,$sql);
 		$row=$res->fetch_array();
-
 	 ?>
 
 	<title>Mi Vehículo</title>
@@ -53,7 +52,7 @@
     					</div>
     					<div class="celular form-group">
 						<label for="exampleInputEmail1">Color: </label>
-						<input  class="form-control" type="color" id="color" name="color" placeholder="" required="true" disabled> <br>
+						<input  style="height: 40px;" class="form-control" type="color" id="color" name="color" placeholder="" required="true" disabled> <br>
 						</div>
    						<div class="celular form-group">
 						<label for="exampleInputEmail1" >Placa</label>

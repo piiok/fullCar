@@ -38,7 +38,7 @@
   </head>
   <body>
     <div id="map"></div>
-    <script>
+     <script> 
 
       function initMap() {
         var mapCanvas = document.getElementById("map");
@@ -95,12 +95,39 @@
         
 
     </script>
+    <!-- <script> 
+      function initMap() {
+        //get api uses
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+
+        var waypts = [{ location: { lat: 41.94, lng: 1.56 }, stopover: true },
+            { location: { lat: 41.99, lng: 1.53 }, stopover: true },
+            { location: { lat: 41.98, lng: 1.52 }, stopover: true }];
+
+        var mapa = new GMaps({
+            el: '#map',
+            lat: waypts[0].location.lat,
+            lng: waypts[0].location.lng,
+            zoom: 4
+        });
+        mapa.drawRoute({
+            origin: [waypts[0].location.lat, waypts[0].location.lng],
+            destination: [waypts[waypts.length - 1].location.lat, waypts[waypts.length - 1].location.lng],
+            travelMode: 'walking',
+            strokeColor: '#0054c2',
+            strokeOpacity: 0.6,
+            strokeWeight: 6
+        });
+    }
+
+    </script>-->
     <input class="search" type="search" name="search" disabled="true" value="UIS, a 26a-91, Calle 8, Bucaramanga, Santander">
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
 
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXyvCsjT_I4FcKCIm7Bl3fJqhGYO-MDJ4&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG0UHJOVdceIrurCcXNeWtkYg9--hhXbs&callback=initMap">
     </script>
     <button class="continuar" type="">Continuar</button>
   </body>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="imagenes/icon.ico" type="image/x-icon" />
+    <title>Ofrecer Ruta</title>
+    <style>
+      .search{
+        position: fixed;
+        width: 50vw;
+        z-index: 1;
+        top: 5vh;
+        left:25vw;
+      }
+      .continuar{
+        position: fixed;
+        z-index: 1;
+        bottom:5vh;
+        left:30vw;
+        width:40vw; 
+      }
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+     <script> 
+
+      function initMap() {
+        var mapCanvas = document.getElementById("map");
+        var myCenter=new google.maps.LatLng(7.140292875841898,-73.12015504377644);
+        var mapOptions = {center: myCenter, zoom: 13};
+        
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+          google.maps.event.addListener(map, 'click', function(event) {
+            placeMarker(map, event.latLng,marker);
+          });
+        var marker = new google.maps.Marker({
+          position: myCenter,
+          map: map,
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: 'UIS, a 26a-91, Calle 8, Bucaramanga, Santander'
+          });
+          infowindow.open(map,marker);
+          
+        }
+    </script>
+
+    <!-- Input de buscar-->
+    <input class="search" type="search" name="search" disabled="true" value="UIS, a 26a-91, Calle 8, Bucaramanga, Santander">
+
+    
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script> 
+
+    <!-- Librería google maps api -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG0UHJOVdceIrurCcXNeWtkYg9--hhXbs&callback=initMap">
+    </script>
+    
+    <!-- boton continuar -->
+    <button class="continuar" type="">Continuar</button>
+  </body>
+</html>

@@ -32,7 +32,7 @@
       
         <div class="col-lg-12 col-sm-12 col-md-12 col-xl-12">
             <center><label class="btn btn-block btn-dark" style="border: solid white 0.5px;">
-                Sube una foto de tu vehiculo&hellip; <input id="file" type="file" style="display: none;" class="custom-file-input"name="foto" accept="image/*" placeholder="Selecciona una imagen">
+                Sube una foto de tu vehiculo&hellip; <input id="foto" type="file" style="display: none;" class="custom-file-input" name="foto" accept="image/*" placeholder="Selecciona una imagen">
             </label></center>
         </div>
         

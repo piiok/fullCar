@@ -27,6 +27,7 @@
 
 		if ($foto['tmp_name']=="") {
 			$foto_v  = "";
+			echo "]Entro al if";
 		}
 
 		$cons="INSERT INTO full_car.vehiculo(placa, modelo, color, tipo, foto,cel_v) VALUES ('".$placa."','".$modelo."', '".$color."', '".$tipo."','".$foto_v."','".$_SESSION[cel]."')";
