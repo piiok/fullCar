@@ -41,11 +41,9 @@
 						<div class="linea" style="border: solid black 0.5px; margin-bottom: 15px;"></div>
      						<div class="form-group">
 							Tipo de vehículo: <select class="custom-select " id="tipo" name="tipo" disabled>
-							<option checked value="Carro">Carro</option>
-							<option value="Moto">Moto</option>
-							<option value="Buseta">Buseta</option>
-							<option value="Bus">Bus</option>
-							<option value="Otro">Otro</option>
+							<option checked value="1">Auto</option>
+							<option value="2">Camioneta</option>
+							<option value="3">Moto</option>
 						</select>
 						</div>
 						</div>
