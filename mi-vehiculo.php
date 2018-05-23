@@ -28,7 +28,7 @@
 	  	<center><h1>Mi vehículo</h1></center>
 	  	<center><img src="<?php  
 							if($row[foto]==""){
-								echo "./imagenes/default-image.png";
+								echo "./imagenes/logofull1.png";
 							}else{
 								echo $row[foto];
 							}
