@@ -13,7 +13,7 @@
       
         <br>
         <br>
-        <h3>REGISTRARSE</h3> <br>
+        <h3>Ofrecer Ruta</h3> <br>
         <br>
         Fecha de partida: <input type="date" name="Date"><br><br><br>
         Hora de partida: <input type="time" name="HPartida"> <br><br><br>

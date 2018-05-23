@@ -36,19 +36,19 @@
 
       function initMap() {
         var mapCanvas = document.getElementById("map");
-        var myCenter=new google.maps.LatLng(7.140292875841898,-73.12015504377644);
+        var myCenter=new google.maps.LatLng(7.0996656,-73.1095528);
         var mapOptions = {center: myCenter, zoom: 13};
         
         var map = new google.maps.Map(mapCanvas, mapOptions);
-          google.maps.event.addListener(map, 'click', function(event) {
-            placeMarker(map, event.latLng,marker);
-          });
+          // google.maps.event.addListener(map, 'click', function(event) {
+          //   placeMarker(map, event.latLng,marker);
+          // });
         var marker = new google.maps.Marker({
           position: myCenter,
           map: map,
         });
         var infowindow = new google.maps.InfoWindow({
-            content: 'UIS, a 26a-91, Calle 8, Bucaramanga, Santander'
+            content: 'Cacique El Centro Comercial'
           });
           infowindow.open(map,marker);
           
@@ -56,9 +56,9 @@
     </script>
 
     <!-- Input de buscar-->
-    <form action="O_ruta3.php" method="get" accept-charset="utf-8">
+    <form action="OfrecerRutaLoad.php" method="get" accept-charset="utf-8">
 
-      <input class="search" type="search" name="search" disabled="true" value="UIS, a 26a-91, Calle 8, Bucaramanga, Santander">
+      <input class="search" type="search" name="search" disabled="true" value="Cacique El Centro Comercial, Transversal 93, Bucaramanga, Santander">
 
       
       <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
@@ -70,7 +70,7 @@
       </script>
       
       <!-- boton continuar -->
-      <button class="continuar" type="submit">Continuar</button>
+      <button class="continuar" type="submit">Finalizar</button>
     </form>
   </body>
 </html>
