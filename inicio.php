@@ -34,7 +34,7 @@ if ($_SESSION[sesion]=="si") {
     </div>
     <div class="celular form-group">
 
-      <label for="exampleInputEmail1" >Numero de Celular</label>
+      <label for="exampleInputEmail1" >Numero de celular</label>
       <input type="num" name="cel" class="form-control" id="exampleInputEmail1" required="tru" aria-describedby="emailHelp" placeholder="Por favor ingresa tu numero">
      
     </div>
@@ -51,7 +51,7 @@ if ($_SESSION[sesion]=="si") {
           Recordar mi contraseña de inicio
         </label>
       </div>
-      <div style="color:red;">
+      <div style="color:white;background-color:black; border-radius: 5px; margin-top: 10px;margin-right: 30px;margin-left: 30px; text-align: center;">
     <?php 
       error_reporting(0);
       extract($_GET);
@@ -64,7 +64,7 @@ if ($_SESSION[sesion]=="si") {
     </div>
     </fieldset>
     <center><button type="submit" class="btn btn-warning btn-lg btn-large" style="margin-bottom: 15px;border: solid 0.5px black;">Iniciar Sesion</button></center>
-    <center><a href="./registrarse_1.php"><button type="button" class="btn btn-primary btn-sm btn-small" style="margin-bottom: 20px; border: solid 0.5px white ;">Registrarse</button></a></center>
+    <center><a href="./registrarse_1.php"><button type="button" class="btn btn-primary btn-sm btn-small" style="margin-bottom: 20px; border: solid 0.5px black ;">Registrarse</button></a></center>
   </fieldset>
 </form>
 </div>
