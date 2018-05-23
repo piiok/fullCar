@@ -48,11 +48,9 @@
 						<!-- application/pdf -->
 						<br>
 						Tipo de vehículo: <select id="tipo" name="tipo" >
-							<option checked value="Carro">Carro</option>
-							<option value="Moto">Moto</option>
-							<option value="Buseta">Buseta</option>
-							<option value="Bus">Bus</option>
-							<option value="Otro">Otro</option>
+							<option checked value="1">Auto</option>
+							<option value="2">Camioneta</option>
+							<option value="3">Moto</option>
 						</select><br>
 						<br>
 						Modelo: <input type="text" id="modelo" name="modelo" placeholder="Escribe el modelo de tu auto"> <br>
