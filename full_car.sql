@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-05-2018 a las 00:10:05
+-- Tiempo de generación: 24-05-2018 a las 00:57:53
 -- Versión del servidor: 5.7.17-log
 -- Versión de PHP: 7.1.16
 
@@ -21,6 +21,37 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `full_car`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `escalas`
+--
+
+CREATE TABLE `escalas` (
+  `id_escala` int(11) NOT NULL,
+  `lugar` varchar(30) NOT NULL,
+  `lugar_tipo` varchar(10) NOT NULL,
+  `id_ruta_e` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ruta`
+--
+
+CREATE TABLE `ruta` (
+  `id_ruta` int(11) NOT NULL,
+  `fecha` date NOT NULL,
+  `hora_salida` time(4) DEFAULT NULL,
+  `hora_llegada` time(4) DEFAULT NULL,
+  `origen` varchar(30) NOT NULL,
+  `origen_tipo` varchar(10) NOT NULL,
+  `destino` varchar(30) NOT NULL,
+  `destino_tipo` varchar(10) NOT NULL,
+  `cel_r` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -61,6 +92,20 @@ CREATE TABLE `vehiculo` (
 --
 
 --
+-- Indices de la tabla `escalas`
+--
+ALTER TABLE `escalas`
+  ADD PRIMARY KEY (`id_escala`),
+  ADD KEY `haber_idx` (`id_ruta_e`);
+
+--
+-- Indices de la tabla `ruta`
+--
+ALTER TABLE `ruta`
+  ADD PRIMARY KEY (`id_ruta`),
+  ADD KEY `pertenece_idx` (`cel_r`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -78,14 +123,38 @@ ALTER TABLE `vehiculo`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `escalas`
+--
+ALTER TABLE `escalas`
+  MODIFY `id_escala` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `ruta`
+--
+ALTER TABLE `ruta`
+  MODIFY `id_ruta` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `vehiculo`
 --
 ALTER TABLE `vehiculo`
-  MODIFY `id_vehiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_vehiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `escalas`
+--
+ALTER TABLE `escalas`
+  ADD CONSTRAINT `haber` FOREIGN KEY (`id_ruta_e`) REFERENCES `ruta` (`id_ruta`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `ruta`
+--
+ALTER TABLE `ruta`
+  ADD CONSTRAINT `pertenece` FOREIGN KEY (`cel_r`) REFERENCES `usuario` (`cel`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `vehiculo`

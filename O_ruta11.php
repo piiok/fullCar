@@ -7,9 +7,7 @@
     <title>Ofrecer Ruta</title>
   </head>
   <body>
-    <script>
-      var cant = 0;
-    </script>
+
     <center>
       <form action="O_ruta2.php" method="post" accept-charset="utf-8">
       
@@ -21,15 +19,6 @@
         Hora de partida: <input type="time" id="HPartida" step="hh:mm" name="HPartida" > <br><br><br>
         Hora estimada de llegada: <input type="time" name="HLlegada" id="HLlegada" value="12:00"> <br><br><br>
         Cantidad de cupos disponibles: <input type="number" name="cupos"><br><br><br>
-        Origen: 
-        <select name="TipoOrigen">
-          <option value="lugar"  checked>Lugar</option>
-          <option value="cra">Cra</option>
-          <option value="cll">Calle</option>
-          <option value="direccion">Dirección</option>
-          <option value="Barrio">Barrio</option>
-        </select> 
-        <div id="cont"></div>
 
         <button class="continuar" type="submit">Continuar</button>
       </form>
@@ -47,8 +36,6 @@
       }
       document.getElementById("Date").value = f.getUTCFullYear()+"-"+x+"-"+y;
       //document.getElementById("HPartida").value=f.getHours()+":"+f.getMinutes();
-      var tipo = document.getElementById("cont");
-      
     </script>
    
     
