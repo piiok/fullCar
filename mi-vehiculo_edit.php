@@ -97,7 +97,7 @@
 						 
 						 <br>
 						 Técnico mecánico: <a href="<?php 
-							echo $row[t_macanico]
+							echo $row[t_mecanico]
 						 ?>" alt="No hay documento" download>
 						 <?php 
 						 if ($row[t_mecanico]=="") {
