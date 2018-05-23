@@ -56,7 +56,7 @@
     </script>
 
     <!-- Input de buscar-->
-    <form action="OfrecerRutaLoad.php" method="get" accept-charset="utf-8">
+    <form action="OfrecerRutaLoad.html" method="get" accept-charset="utf-8">
 
       <input class="search" type="search" name="search" disabled="true" value="Cacique El Centro Comercial, Transversal 93, Bucaramanga, Santander">
 
