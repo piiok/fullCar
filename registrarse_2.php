@@ -31,10 +31,11 @@
 					echo "¡Posible error en la subida de los ficheros!<br>";
 				}
 			}
-		}
+		
 		$_SESSION["sesion"] = "si";
 		$_SESSION["cel"] =$cel;
 		$_SESSION["nombre"]=$nombre;
+		}
 	}
 	 ?>
 <html>

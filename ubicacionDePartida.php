@@ -8,6 +8,20 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
+      .search{
+        position: fixed;
+        width: 50vw;
+        z-index: 1;
+        top: 5vh;
+        left:25vw;
+      }
+      .continuar{
+        position: fixed;
+        z-index: 1;
+        bottom:5vh;
+        left:30vw;
+        width:40vw; 
+      }
       #map {
         height: 100%;
         /*-webkit-filter: grayscale(100%);
@@ -41,12 +55,17 @@
           //icon: image,
           //animation: google.maps.Animation.BOUNCE,
         });
+        var infowindow = new google.maps.InfoWindow({
+            content: 'UIS, a 26a-91, Calle 8, Bucaramanga, Santander'
+          });
+          infowindow.open(map,marker);
+          
         }
         //var image = './images/icono.png';
 
 
         // Create an array of alphabetical characters used to label the markers.
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        // var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
         // Add some markers to the map.
         // Note: The code uses the JavaScript Array.prototype.map() method to
@@ -58,31 +77,31 @@
           //label: labels[i % labels.length]
           //});
         //});
-        function placeMarker(map, location,marker) {
+        // function placeMarker(map, location,marker) {
           //var marker = new google.maps.Marker({
           //  position: location,
           //  map: map
           //});
-          var latlng = new google.maps.LatLng(location.lat(),location.lng())
-          marker.setPosition(latlng);
-          var infowindow = new google.maps.InfoWindow({
-            content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
-          });
-          infowindow.open(map,marker);
-        }
+          // var latlng = new google.maps.LatLng(location.lat(),location.lng())
+          // marker.setPosition(latlng);
+          // var infowindow = new google.maps.InfoWindow({
+            // content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+          // });
+          // infowindow.open(map,marker);
+        // }
       
 
         // Add a marker clusterer to manage the markers.
-        //var markerCluster = new MarkerClusterer(map, markers,
-            //{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          //}
+        
 
     </script>
+    <input class="search" type="search" name="search" disabled="true" value="UIS, a 26a-91, Calle 8, Bucaramanga, Santander">
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
 
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXyvCsjT_I4FcKCIm7Bl3fJqhGYO-MDJ4&callback=initMap">
     </script>
+    <button class="continuar" type="">Continuar</button>
   </body>
 </html>

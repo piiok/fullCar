@@ -35,11 +35,6 @@
 			$t_propiedad_v="";
 		}
 
-		if ($spam) {
-			$spam=1;
-		}else{
-			$spam=0;
-		}
 		$cons="INSERT INTO full_car.vehiculo(placa, modelo, color, t_propiedad, t_mecanico, tipo, foto,cel_v) VALUES ('".$placa."','".$modelo."', '".$color."', '".$t_propiedad_v."', '".$t_mecanico_v."', '".$tipo."','".$foto_v."','".$_SESSION[cel]."')";
 
 		$res = mysqli_query ($conn ,$cons);
