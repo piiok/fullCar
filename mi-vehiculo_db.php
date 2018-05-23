@@ -59,7 +59,7 @@
 			}
 		}
 		$conn->close();
-		header("Location:./home.php");
+		header("Location:./bienvenido.html");
 
  	?>
 </body>
