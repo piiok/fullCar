@@ -15,7 +15,7 @@
 	<script src="./librerias/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
 	
 	<center><div class="col-xl-12 text-left" class="col-lg-6 text-left" class="col-md-6 text-left" class="col-sm-6 text-left" style="padding-top: 15px; min-height: 100vh; display: grid;"> 
-	<form class="formulario" id="form_v1" name="form_v1" action="mi-vehiculo_db.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data" >
+	<form class="formulario" id="form_v1" name="form_v1" action="mi-vehiculo_2.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data" >
 			<!-- El enctype="multipart/form-data" es necesario para enviar los FILES -->
 <fieldset>
 					

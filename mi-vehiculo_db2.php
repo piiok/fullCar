@@ -13,14 +13,19 @@
 		session_start();
 		extract($_POST);
 		extract($_FILES);
-		$cons1 ="SELECT id_vehiculo FROM full_car.vehiculo WHERE cel_v = '".$_SESSION[cel]."';";
+		$cons1 ="SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'full_car' AND   TABLE_NAME   = 'vehiculo';";
 		#$cons1 ="SELECT id_vehiculo FROM full_car.vehiculo order by id_vehiculo desc limit 1";
 		$rest = mysqli_query ($conn ,$cons1);
 		
 		$row=$rest->fetch_array();
 
+		$foto_v = "./docs/foto_vehiculo/".$row[0].".".end(explode(".", $foto["name"]));
 		$t_mecanico_v = "./docs/t_mecanico/".$row[0].".pdf";
 		$t_propiedad_v = "./docs/t_propiedad/".$row[0].".pdf";
+
+		if ($foto['tmp_name']=="") {
+			$foto_v  = "";
+		}
 
 		if ($t_mecanico['tmp_name']=="") {
 			$t_mecanico_v="";
@@ -30,7 +35,7 @@
 			$t_propiedad_v="";
 		}
 
-		$cons="UPDATE full_car.vehiculo SET t_propiedad ='".$t_propiedad."', t_mecanico = '".$t_mecanico."' WHERE cel_v='".$_SESSION[cel]."';";
+		$cons="INSERT INTO full_car.vehiculo(placa, modelo, color, t_propiedad, t_mecanico, tipo, foto,cel_v) VALUES ('".$placa."','".$modelo."', '".$color."', '".$t_propiedad_v."', '".$t_mecanico_v."', '".$tipo."','".$foto_v."','".$_SESSION[cel]."')";
 
 		$res = mysqli_query ($conn ,$cons);
 		if(empty($res)){

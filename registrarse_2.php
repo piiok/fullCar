@@ -68,7 +68,7 @@
 		      <center><h4 style="margin-bottom: 30px;">¡Ya casi estas registrado!</h4></center>
     		<div class="celular form-group">
       		<div class="celular texto" style="margin-top: -20px;">
-    		<p>Es necesario que nos proporciones tu permiso de conducir, toma una foto por la parte de adelante del documento.</p>
+    		<p>Es necesario que nos proporciones su permiso de conducir, toma una foto por la parte de adelante del documento.</p>
   			</div>
   <!-- ############## -->
   			<hr>
