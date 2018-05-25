@@ -65,7 +65,7 @@
         <input class="form-control col-5" type="text" name="Destino" placeholder="Ejemplo 33 # 36-43">
 
         <hr style="width: 60vw;">
-        <label for="exampleInputEmail1" style="color: black;">Escalas:</label> 
+        <label for="exampleInputEmail1" style="color: white;">Escalas:</label> 
         <div id="escalas"> 
           <div id="1" name="holi">
             
