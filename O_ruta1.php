@@ -72,6 +72,7 @@
           </div>
           <!-- acá se irán agregando las escalas gracias al botón agregar parada -->
         </div>
+        <br>
         <!-- ################### -->
 
         <button type="button" class="btn btn-primary btn-sm" onclick="agregarEscala()"style="border: solid 0.5px black;">Agregar parada</button>
