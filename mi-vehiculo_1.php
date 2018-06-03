@@ -63,14 +63,25 @@
       <option value="3">Moto</option>
     </select>
   </div>
-     <div class="celular form-group">
+     <div class="form-group row">
+     	<div class="col-6">
+	 <label for="exampleInputEmail1" >Marca:</label>
+      <input type="num" name="marca" class="form-control" id="marca" required="tru" aria-describedby="emailHelp" placeholder="Ford">
+     	</div>
+     <div class="col-6">
 	 <label for="exampleInputEmail1" >Modelo:</label>
-      <input type="num" name="modelo" class="form-control" id="modelo" required="tru" aria-describedby="emailHelp" placeholder="¿Que modelo es tu vehiculo?">
-     
+      <input type="num" name="modelo" class="form-control" id="modelo" required="tru" aria-describedby="emailHelp" placeholder="Mustang">
+     	</div>
     </div>
-	<div class="celular form-group">
-      <label for="exampleInputEmail1" >Placa</label>
-      <input type="num" name="placa" class="form-control" id="placa" required="tru" aria-describedby="emailHelp" placeholder="Pon la placa de tu vehiculo">
+	<div class="form-group row">
+		<div class="col-6">
+      <label for="exampleInputEmail1" >Año:</label>
+      <input type="num" name="año" class="form-control" id="año" required="tru" aria-describedby="emailHelp" placeholder="2005">
+      	</div>
+     <div class="col-6">
+      <label for="exampleInputEmail1">Placa</label>
+      <input type="num" name="placa" class="form-control" id="placa" required="tru" aria-describedby="emailHelp" placeholder="FUL007">
+      	</div>
     </div>
 	<div class="celular form-group">
       <label>Selecciona el color de tu vehiculo</label>

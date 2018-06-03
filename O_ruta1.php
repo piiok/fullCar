@@ -10,6 +10,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+    .celular2{
+    width: 50% !important;
+    margin: 0 auto;
+    min-width: 320px;
+  }
+  </style>
   </head>
   <body>
     <script>
@@ -28,22 +35,36 @@
         <br>
         <br>
         <h1>Ofrecer Ruta</h1> <br>
+        <center><img src="imagenes/logofull1.png" style="width: 50%"></center>
+    <br>
+        <div class="celular2 form-group row">
+        <div class="col-6">
         <label for="exampleInputEmail1">Fecha de partida:</label>
-        <input class="form-control col-6" type="date" id="Date" name="Date" onchange=""><br>
-        <label for="exampleInputEmail1">Hora de partida:</label>
-        <input class="form-control col-5" type="time" id="HPartida" step="hh:mm" name="HPartida" > <br>
-        <label for="exampleInputEmail1">Hora de estimada de llegada:</label>
-        <input class="form-control col-5" type="time" name="HLlegada" id="HLlegada" value="12:00"> <br>
-        <!-- ############### -->
-        
-       <label for="exampleInputEmail1"> Cantidad de cupos disponibles:</label>
-        <br>
-        <div class="col-3">
+        <input class="form-control" type="date" id="Date" name="Date" onchange="">
+        </div>
+        <div class="col-6">
+        <label for="exampleInputEmail1">Cupos disponibles:</label>
         <input class="form-control" type="number" name="cupos" placeholder="0">
         </div>
+        </div>
+        <br>
+        <div class="celular2 form-group row">
+          <div class="col-6">
+        <label for="exampleInputEmail1">Hora de partida:</label>
+        <input class="form-control" type="time" id="HPartida" step="hh:mm" name="HPartida" >
+          </div>
+          <div class="col-6">
+        <label for="exampleInputEmail1">Hora de llegada:</label>
+        <input class="form-control" type="time" name="HLlegada" id="HLlegada" value="12:00">
+          </div>
+        </div>
+        <!-- ############### -->
+        
         <!-- ############# -->
         <!-- Cantidad de cupos disponibles: <input type="number" name="cupos"><br><br> -->
         <br>
+        <div class="celular2 form-group row">
+          <div class="col-6">
         <label for="exampleInputEmail1">Origen:</label> 
         <select name="TipoOrigen">
           <option value="lugar">Lugar</option>
@@ -51,10 +72,9 @@
           <option value="cll">Calle</option>
           <option value="Barrio">Barrio</option>
         </select> 
-        <input class="form-control col-5" type="text" name="Origen" placeholder="Ejemplo 25 # 14-61">
-
-        <hr style="width: 60vw;">
-
+        <input class="form-control" type="text" name="Origen" placeholder="Ejemplo 25 # 14-61">
+        </div>
+        <div class="col-6">
         <label for="exampleInputEmail1">Destino:</label> 
         <select name="TipoDestino">
           <option value="lugar"  >Lugar</option>
@@ -62,8 +82,9 @@
           <option value="cll">Calle</option>
           <option value="Barrio">Barrio</option>
         </select> 
-        <input class="form-control col-5" type="text" name="Destino" placeholder="Ejemplo 33 # 36-43">
-
+        <input class="form-control" type="text" name="Destino" placeholder="Ejemplo 33 # 36-43">
+        </div>
+        </div>
         <hr style="width: 60vw;">
         <label for="exampleInputEmail1" style="color: black;">Escalas:</label> 
         <div id="escalas"> 
