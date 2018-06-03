@@ -86,7 +86,7 @@
         </div>
         </div>
         <hr style="width: 60vw;">
-        <label for="exampleInputEmail1" style="color: black;">Escalas:</label> 
+        <label for="exampleInputEmail1" style="color: white;">Escalas:</label> 
         <div id="escalas"> 
           <div id="1" name="holi">
             
