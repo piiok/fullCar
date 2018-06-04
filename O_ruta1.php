@@ -80,7 +80,7 @@
           <option value="lugar"  >Lugar</option>
           <option value="cra" selected="true">Cra</option>
           <option value="cll">Calle</option>
-          <option value="Barrio">Barrio</option>
+          <option value="barrio">Barrio</option>
         </select> 
         <input class="form-control" type="text" name="Destino" placeholder="Ejemplo 33 # 36-43">
         </div>
@@ -140,7 +140,7 @@
         //Agregando los option al select
 
         document.getElementById(inp.id).innerHTML+=
-          "<option value='lugar'>Lugar</option>\n<option value='cra' selected='true'>Cra</option>\n<option value='cll'>Calle</option>\n<option value='Barrio'>Barrio</option>";
+          "<option value='lugar'>Lugar</option>\n<option value='cra' selected='true'>Cra</option>\n<option value='cll'>Calle</option>\n<option value='barrio'>Barrio</option>";
         divE.innerHTML+=" \n";
 
         //Agregando el input type text, muy similar al anterior
