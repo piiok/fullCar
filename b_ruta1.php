@@ -65,7 +65,7 @@
     </center>
     <br>
     <br>
-    <button class="continuar btn btn-warning btn-lg btn-large" type="submit" style="margin-bottom: 15px;border: solid 0.5px black;">Continuar</button>
+    <a href="./home.php"><input class="continuar btn btn-warning btn-lg" style="margin-bottom: 15px;border: solid 0.5px black;" value="Regresar"></a>
     </fieldset>
       </form></center>
     </div>
